@@ -201,7 +201,7 @@ header nav button:hover {
 }
 
 .section2 {
-  padding: 0 10rem;
+  padding: 0 11rem;
   overflow: hidden;
   background-color: #f5f6f8;
 }
@@ -210,7 +210,7 @@ header nav button:hover {
   display: flex;
   justify-content: space-around;
   overflow-x: auto;
-  scroll-snap-type: x proximity;
+  scroll-snap-type: x mandatory;
   padding: 1rem 0;
   gap: 8%;
 }
@@ -511,6 +511,7 @@ color: var(--main-color);
   display: block;
   z-index: -99;
   background-position: center;
+  object-fit: cover;
 }
 img, svg{
   vertical-align: middle;

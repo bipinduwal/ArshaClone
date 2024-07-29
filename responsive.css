@@ -98,6 +98,19 @@
         padding-right: 2rem;
     }
 
+    .section2 {
+
+        padding-left: 80px;
+    }
+
+    .section2 .clientslogo {
+        gap: 10%;
+    }
+
+    .section2 .clientslogo img {
+        width: 15%;
+    }
+
     .section4 {
         display: flex;
         flex-direction: column-reverse;
@@ -140,7 +153,7 @@
 
     .section8 .portfolio-container .container .items:nth-child(2) {
         left: auto;
-        right:0 ;
+        right: 0;
         height: 16%;
     }
 
@@ -234,4 +247,151 @@
     .section13 .contact-container .contact-right input[type="submit"] {
         top: 95%;
     }
+}
+
+@media screen and (max-width:426px) {
+    .main-container .section1 .container {
+        flex-direction: column-reverse;
+        padding: 15rem 0 6rem 0;
+
+    }
+
+    .main-container .section1 .contentText h2 {
+        font-size: 3rem;
+    }
+
+    .main-container .section1 .contentText p {
+        font-size: 1.7rem;
+    }
+
+    .section2 .clientslogo img {
+        width: 40%;
+    }
+
+    .section3 .para-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section4 .rightt img {
+        scale: 0.8;
+    }
+
+    .section5 .left {
+        padding: 2rem;
+    }
+
+    .section5 .left img {
+        height: 200px !important;
+    }
+
+    .section6 .services-container {
+        display: flex;
+        flex-direction: column;
+        /* grid-template-columns: repeat(2, 1fr); */
+        gap: 3rem;
+    }
+
+    .section8 .portfolio-container .container {
+        background-color: white;
+        height: 400vh;
+        position: relative;
+    }
+
+    .section8 .portfolio-container .container .items {
+        position: absolute;
+        width: 100%;
+        overflow-y: hidden;
+    }
+
+    .section8 .portfolio-container .container .items:nth-child(1) {
+        height: 13%;
+    }
+
+    .section8 .portfolio-container .container .items:nth-child(2) {
+        top: calc(13% + .5% );
+        height: 9%;
+        
+    }
+
+    .section8 .portfolio-container .container .items:nth-child(3) {
+        top: calc(22% + 1%);
+        height: 8%;
+    }
+
+    .section8 .portfolio-container .container .items:nth-child(4) {
+        top: calc(30% + 1.5%);
+        height: 8%;
+    }
+
+    .section8 .portfolio-container .container .items:nth-child(5) {
+        top: calc(38% + 2%);
+        height: 20%;
+    }
+
+    .section8 .portfolio-container .container .items:nth-child(6) {
+        top: calc(58% + 2.5%);
+        height: 18%;
+    }
+
+    .section8 .portfolio-container .container .items:nth-child(7) {
+        top: calc(76% + 3%);
+        height: 7%;
+    }
+
+    .section8 .portfolio-container .container .items:nth-child(8) {
+        top: calc(83% + 3.5%);
+        height: 7%;
+    }
+
+    .section8 .portfolio-container .container .items:nth-child(9) {
+        top: calc(90% + 4%);
+        height: 8%;
+    }
+
+    .section8 .portfolio-container .container .items img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    .section9 .team-container .team-mem {
+        flex: 1 0 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section9 .team-container .about-mem {
+        padding: 3rem 2.5rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .section9 .team-container .about-mem h4::after {
+        width: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .section10 {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+    }
+
+    .section11 .testimonals-container .tests .quote {
+        margin: 0 1% 1rem;
+    }
+
+    footer .footer-top {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+@media screen and (max-width:321px) {
+.main-container .section1 .contentText .buttons > *{
+    font-size: 1.5rem !important;
+}
+    
 }
