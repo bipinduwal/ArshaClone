@@ -1,0 +1,237 @@
+@media (min-width: 2560px) {
+    html {
+        font-size: 63%;
+    }
+
+    header {
+        padding: 0 15% !important;
+    }
+
+    footer,
+    section {
+        background-color: white;
+        padding: 5rem 15% !important;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 60%;
+    }
+
+    header {
+        padding: 0 2%;
+    }
+
+    footer,
+    section {
+        background-color: white;
+        padding-right: 3% !important;
+        padding-left: 3% !important;
+    }
+
+    header nav ul {
+        display: none;
+
+    }
+
+    header nav i {
+        display: block;
+        visibility: visible;
+        font-size: 3rem;
+        color: white;
+        margin-left: 1rem;
+    }
+
+    .section6 .services-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    .section7 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .section7 .calltoaction {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section7 .calltoaction-btn>a {
+
+        padding: 1.5rem 4rem;
+    }
+
+    .section8 .portfolio-container .container {
+        background-color: white;
+        height: 140vh;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+
+    .main-container .section1 .container {
+        flex-direction: column-reverse;
+        padding: 9rem 0 5rem 0;
+
+    }
+
+    .main-container .section1 .contentimage {
+        margin-right: 0;
+        width: 96%;
+        padding-bottom: 4rem;
+    }
+
+    .main-container .section1 .contentText {
+        padding-right: 2rem;
+    }
+
+    .section4 {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .section4 .rightt {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 0 5rem 0;
+    }
+
+    .section4 .rightt img {
+        scale: 1.2;
+    }
+
+    .section5 {
+        display: flex;
+        flex-direction: column;
+        padding: 4rem 10rem;
+    }
+
+    .section8 .portfolio-container .container {
+        background-color: white;
+        height: 220vh;
+        position: relative;
+    }
+
+    .section8 .portfolio-container .container .items {
+        position: absolute;
+        width: 48.5%;
+        overflow-y: hidden;
+    }
+
+    .section8 .portfolio-container .container .items:nth-child(1) {
+        left: 0;
+        height: 24%;
+    }
+
+    .section8 .portfolio-container .container .items:nth-child(2) {
+        left: auto;
+        right:0 ;
+        height: 16%;
+    }
+
+    .section8 .portfolio-container .container .items:nth-child(3) {
+        top: calc(16% + 1.5%);
+        right: 0;
+        height: 14%;
+        /* z-index: 999; */
+    }
+
+    .section8 .portfolio-container .container .items:nth-child(4) {
+        top: calc(24% + 1.5%);
+        left: 0;
+        right: 0;
+        height: 15%;
+    }
+
+    .section8 .portfolio-container .container .items:nth-child(5) {
+        top: calc(16% + 15% + 2%);
+        left: auto;
+        right: 0;
+        height: 36%;
+    }
+
+    .section8 .portfolio-container .container .items:nth-child(6) {
+        top: calc(24% + 15% + 3%);
+        left: 0%;
+        height: 36%;
+    }
+
+    .section8 .portfolio-container .container .items:nth-child(7) {
+        top: calc(15% + 14% + 36% + 5.5%);
+        right: 0;
+        height: 14%;
+    }
+
+    .section8 .portfolio-container .container .items:nth-child(8) {
+        top: calc(24% + 15% + 36% + 4.5%);
+        left: 0%;
+        height: 15%;
+    }
+
+    .section8 .portfolio-container .container .items:nth-child(9) {
+        left: auto;
+        right: 0;
+        top: calc(15% + 14% + 36% + 15% + 6%);
+        height: 15%;
+    }
+
+    .section9 .team-container .team-mem {
+        flex: 1 0 100%;
+    }
+
+    .section10 {
+        padding: 6rem !important;
+    }
+
+    .section10 .pricing-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section10 .pricing-container .plan {
+        width: 100%;
+    }
+
+    .section12 .question-container {
+        padding: 1rem 0%;
+    }
+
+    .section13 .contact-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .footer-top {
+        display: grid;
+        grid-template-columns: 60% 20% 20%;
+        row-gap: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    footer .footer-top .follow-us {
+        grid-column: 1/3;
+    }
+
+    .section14 .container {
+        width: 95%;
+    }
+
+    .section13 .contact-container .contact-right input[type="submit"] {
+        top: 95%;
+    }
+}

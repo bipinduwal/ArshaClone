@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./responsive.css">
   </head>
   <body>
     <header id="navbar">
@@ -30,6 +31,7 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
         <button>Get Started</button>
+        <i class="bx bx-menu"></i>
       </nav>
     </header>
     <div class="main-container">
@@ -53,7 +55,7 @@
         </div>
       </section>
       <section class="section2" id="about">
-        <div class="clientslogo" id="clientslogo">
+        <div class="clientslogo scroll" id="clientslogo">
           <img src="./images/client-1.png" alt="" />
           <img src="./images/client-2.png" alt="" />
           <img src="./images/client-3.png" alt="" />
@@ -555,8 +557,8 @@
             consectetur velit
           </p>
         </div>
-        <div class="testimonals-container">
-          <div class="tests">
+        <div class="testimonals-container scroll">
+          <div class="tests ">
             <div class="pic">
               <img src="./images/testimonials-1.jpg" alt="" />
             </div>
@@ -940,6 +942,84 @@
         }
         prevScrollpos = currentScrollPos;
       };
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.testimonals-container');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+  let dragging = false;
+
+  container.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - container.offsetLeft;
+    scrollLeft = container.scrollLeft;
+    dragging = false;
+  });
+
+  container.addEventListener('mouseleave', () => {
+    isDown = false;
+  });
+
+  container.addEventListener('mouseup', (e) => {
+    isDown = false;
+    if (!dragging) return;
+    const x = e.pageX - container.offsetLeft;
+    const walk = x - startX;
+
+    if (walk < -50) {
+      scrollToNext();
+    } else if (walk > 50) {
+      scrollToPrev();
+    } else {
+      scrollToNearest();
+    }
+    dragging = false;
+  });
+
+  container.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    dragging = true;
+    const x = e.pageX - container.offsetLeft;
+    const walk = x - startX;
+    container.scrollLeft = scrollLeft - walk;
+  });
+
+  const scrollToNext = () => {
+    const itemWidth = container.querySelector('.tests').offsetWidth;
+    container.scrollBy({
+      left: itemWidth,
+      behavior: 'smooth'
+    });
+  };
+
+  const scrollToPrev = () => {
+    const itemWidth = container.querySelector('.tests').offsetWidth;
+    container.scrollBy({
+      left: -itemWidth,
+      behavior: 'smooth'
+    });
+  };
+
+  const scrollToNearest = () => {
+    const items = Array.from(document.querySelectorAll('.tests'));
+    const containerScrollLeft = container.scrollLeft;
+    const itemWidth = items[0].offsetWidth;
+
+    const index = Math.round(containerScrollLeft / itemWidth);
+    const nearestItem = items[index];
+
+    if (nearestItem) {
+      container.scrollTo({
+        left: nearestItem.offsetLeft,
+        behavior: 'smooth'
+      });
+    }
+  };
+});
+
+
     </script>
   </body>
 </html>
